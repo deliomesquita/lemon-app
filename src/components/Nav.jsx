@@ -1,8 +1,14 @@
+import "../styles/Nav.css";
+
 function Nav() {
   return (
-    <nav>
-      <img src="\images\Logo1.svg" alt="Little Lemon" />
-      <ul>
+    <nav className="navigation">
+      <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
         <li>
           <a href="/">Home</a>
         </li>
@@ -22,6 +28,7 @@ function Nav() {
           <a href="/login">Login</a>
         </li>
       </ul>
+      </div>
     </nav>
   );
 }

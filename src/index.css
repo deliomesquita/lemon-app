@@ -1,10 +1,23 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('../src/fonts/Karla-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'markazi';
+  src: url('../src/fonts/MarkaziText-VariableFont_wght.ttf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  font-family: 'Karla', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'markazi', sans-serif;
 }
 
 code {
