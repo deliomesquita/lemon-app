@@ -15,7 +15,7 @@
     transition: color 0.3s ease;
 }
 #menuToggle a:hover {
-    color: tomato;
+    color: #F4CE14;
 }
 #menuToggle input {
     display: block;
@@ -80,7 +80,9 @@
 #menuToggle input:checked~ul {
     transform: none;
 }
-
+body.stop-transitions * {
+    transition: none !important;
+}
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
     #menu {
