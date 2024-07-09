@@ -50,11 +50,6 @@
 
 /*main-specials-section*/
 .main-specials-section {
-    padding: 0 18em;
-}
-.main-specials-top-block {
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 1em 0;
+    justify-content: center;
 }

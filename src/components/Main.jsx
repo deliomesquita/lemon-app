@@ -1,4 +1,5 @@
 import "../styles/Main.css";
+import Cards from "./Cards";
 
 function Main() {
   return (
@@ -19,19 +20,11 @@ function Main() {
           </div>
        
       </section>
-      {/* <section className="main-specials-section">
+      <section className="main-specials-section">
         <div className="main-specials-container">
-          <div className="main-specials-top-block">
-            <h2>Specials</h2>
-            <button className="main-specials-button">Online Menu</button>
-          </div>
-          <div className="main-specials-cards-container">
-            <div className="main-specials-card"></div>
-            <div className="main-specials-card"></div>
-            <div className="main-specials-card"></div>
-          </div>
+          <Cards />
         </div>
-      </section> */}
+      </section>
     </main>
   );
 }
