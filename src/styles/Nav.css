@@ -91,7 +91,7 @@ body.stop-transitions * {
         position: relative;
         transform: none;
         transition: none;
-        gap: 1rem;
+        gap: 2.5rem;
         width: unset;
         background: none;
         padding: 0;

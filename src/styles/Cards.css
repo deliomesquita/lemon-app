@@ -8,13 +8,15 @@
 }
 .card {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: calc(100% - 2rem);
+    flex-direction: column;
+    width: 100%;
     background-color: #EDEFEE;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
    
+}
+.image-container {
+    width: 100%;
 }
 .card-image {
     width: 100%;
@@ -57,4 +59,28 @@ a {
     color: #333333;
     font-size: 1.8rem;
     font-weight: 600;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    #menu a{
+        font-size: 1.4rem;
+    }
+    .card {
+        display: flex;
+        width: 32%;
+    }
+    .image-container img {
+        max-height: 8rem;
+    }
+    .text-container {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+.card-content {
+    flex: 1 1 auto
 }

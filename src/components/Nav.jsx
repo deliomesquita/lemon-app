@@ -40,7 +40,7 @@ function Nav() {
           <a href="/reservations">Reservations</a>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Order Online</a>
         </li>
         <li>
           <a href="/login">Login</a>
