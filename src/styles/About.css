@@ -1,0 +1,78 @@
+.about__container {
+    margin: 0 1rem;
+}
+.about-intro-text-title {
+    font-size: 2.7em;
+}
+.about__city {
+    font-size: 2rem;
+    color: #333333;
+}
+.about__text {
+    font-size: 1.125rem;
+}
+.about__image1,
+.about__image2 {
+    width: 100%;
+}
+
+/*Desktop*/
+@media screen and (min-width: 1200px) {
+    .about__container {
+        max-width: 856px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin: 0 auto 8rem;
+    }
+    .about-intro-text-title {
+        font-size: 4rem;
+    }
+    .about__images__container {
+        display: flex;
+        position: relative;
+    }
+    .about__text__block {
+        width: 43%;
+        padding: 0 1rem;
+    }
+    .about__image1,
+    .about__image2 {
+        position: absolute;
+        object-fit: cover;
+        width: 15rem;
+        height: 16.125rem;
+        border-radius: 16px;
+        border: 2px solid black;
+    }
+        .about__image1 {
+            top: 7rem;
+            right: 12rem;
+        }
+        .about__image2 {
+            top: 1rem;
+            right: 2rem;
+            z-index: 1;
+        }
+}
+/*Tablet*/
+@media screen and (min-width: 768px)  and (max-width: 1199px) {
+    .main__container__about {
+        max-width: 91%;
+    }
+    .about__container {
+        max-width: 856px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    .about__images__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .about__image1,
+    .about__image2 {
+        width: 46.6%;
+        border: 2px solid black;
+    }
+}

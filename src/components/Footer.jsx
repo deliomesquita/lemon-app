@@ -1,14 +1,16 @@
+import "../styles/Footer.css";
+
 function Footer() {
   return (
-    <footer>
+    <footer className="footer__container">
       <section className="footer-content">
         <img
-          className="footer-img"
+          className="img--baguettes"
           src="\images\restauranfood.jpg"
           alt="Little Lemon Food"
         />
         <section className="footer-nav">
-          <h2>Doormat Nav igation</h2>
+          <h2>Site Links</h2>
           <nav>
             <ul>
               <li>
@@ -29,13 +31,35 @@ function Footer() {
             </ul>
           </nav>
         </section>
+
+      <section className="footer-nav">
+        <h2>Social Media</h2>
+        <nav>
+          <ul>
+            <li>
+              <a className="social-media-links"
+                href="https://www.facebook.com/littlelemonfood/"
+                target="_blank"><img className="facebook-img" src="../images/facebook.png" alt="Facebook" /></a>
+            </li>
+            <li>
+              <a className="social-media-links"
+                href="https://www.instagram.com/littlelemonfood/"
+                target="_blank"
+                >
+                <img className="instagram-img" src="../images/instagram.png" alt="Instagram" />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </section>
 
       <section className="footer-nav">
         <h2>Contact</h2>
         <nav>
           <ul>
-            <li>123 Main St, Lisbon, Portugal</li>
+            <li className="footer---contact--address">
+              123 Main St, Lisbon, Portugal
+            </li>
             <li>
               <a href="tel:+123456789">+1 234-567-890</a>
             </li>
@@ -47,30 +71,7 @@ function Footer() {
           </ul>
         </nav>
       </section>
-
-      <section className="footer-nav">
-        <h2>Social Media Links</h2>
-        <nav>
-          <ul>
-            <li>
-              <a
-                href="https://www.facebook.com/littlelemonfood/"
-                target="_blank"
-              >
-                facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/littlelemonfood/"
-                target="_blank"
-              >
-                Instagram
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+    </section>
     </footer>
   );
 }

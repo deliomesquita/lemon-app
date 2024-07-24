@@ -1,11 +1,23 @@
 .main__container__description,
-.main__container__specials {
+.main__container__specials,
+.main__container__testimonials,
+.main__container__about,
+.main__container__footer {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: #495E57;
-    margin-bottom: 1rem;
+    margin-bottom: 2.56rem;
 }
-.main__container__specials {
+.main__container__footer {
+    margin-bottom: 0;
+}
+.main__container__description,
+.main__container__testimonials,
+.main__container__footer {
+    background-color: #495E57;
+}
+.main__container__specials,
+.main__container__about
+ {
     background-color: white;
 }
 .main, 
@@ -17,7 +29,6 @@
 /* .main-intro-section */
 .main-intro-section {
     max-width: 855px;
-    background-color: #495E57;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -63,6 +74,7 @@
     width: 10rem;
     border-radius: 10px;
     margin: 1rem 0 1rem 0;
+    border: 2px solid black;
 }
 
 /*main-specials-section*/
@@ -122,6 +134,11 @@
         width: 12.5rem;
         font-size: 1.125rem;
         padding: 1.22rem 0;
+        transition: all 500ms ease;
+    }
+    .main-intro-button:hover,
+    .main-specials-button:hover {
+        box-shadow: 0 0 20px #eac50f;
     }
     .main-specials-button {
         max-height: 3.75rem;

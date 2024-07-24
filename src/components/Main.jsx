@@ -1,5 +1,8 @@
 import "../styles/Main.css";
 import Cards from "./Cards";
+import Testimonials from "./Testimonials";
+import About from "./About";
+import Footer from "./Footer";
 
 function Main() {
   return (
@@ -34,6 +37,15 @@ function Main() {
           </div>
         </section>
         </div>
+      </main>
+      <main className="main__container__testimonials">
+        <Testimonials />
+      </main>
+      <main className="main__container__about">
+        <About />
+      </main>
+      <main className="main__container__footer">
+        <Footer />
       </main>
     </>
   );
