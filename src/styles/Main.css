@@ -1,5 +1,5 @@
 .main__container__description,
-.main__container__specials,
+.section__container__specials,
 .main__container__testimonials,
 .main__container__about,
 .main__container__footer {
@@ -15,7 +15,7 @@
 .main__container__footer {
     background-color: #495E57;
 }
-.main__container__specials,
+.section__container__specials,
 .main__container__about
  {
     background-color: white;
@@ -45,16 +45,13 @@
     color: #F4CE14;
     margin: 0;
 }
-.main-specials-text-title {
-    font-size: 2.7em;
-}
 .main-intro-text-block h3 {
     font-size: 2em;
     color: white;
     margin: 0;
 }
 .main-intro-button,
-.main-specials-button {
+.specials-button {
     background-color: #F4CE14;
     border-style: none;
     width: 10rem;
@@ -77,22 +74,6 @@
     border: 2px solid black;
 }
 
-/*main-specials-section*/
-.main-specials-section {
-    display: flex;
-    justify-content: center;
-    margin: 0 1rem;
-}
-.specials-container {
-    max-width: calc(856px - 2rem);
-}
-.specials-text-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
     .main {
@@ -109,7 +90,7 @@
         padding: 0rem 1rem 1rem 1rem;
     }
     .main-intro-text-title,
-    .main-specials-text-title {
+    .specials-text-title {
         font-size: 4rem;
     }
     .main-intro-image-block {
@@ -130,19 +111,15 @@
         margin: -1rem 0 0 0;
     }
     .main-intro-button,
-    .main-specials-button {
+    .specials-button {
         width: 12.5rem;
         font-size: 1.125rem;
         padding: 1.22rem 0;
         transition: all 500ms ease;
     }
     .main-intro-button:hover,
-    .main-specials-button:hover {
+    .specials-button:hover {
         box-shadow: 0 0 20px #eac50f;
-    }
-    .main-specials-button {
-        max-height: 3.75rem;
-        align-self: center;
     }
     .main__container__description {
         margin-bottom: 5rem;

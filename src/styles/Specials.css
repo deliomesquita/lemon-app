@@ -1,0 +1,25 @@
+.article-specials-section {
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+}
+.specials-container {
+    max-width: calc(856px - 2rem);
+}
+.specials-text-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.specials-text-title {
+    font-size: 2.7em;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    .specials-button {
+            max-height: 3.75rem;
+            align-self: center;
+    }
+}
