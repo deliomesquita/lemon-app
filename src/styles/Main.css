@@ -1,4 +1,4 @@
-.main__container__description,
+.hero__container__description,
 .section__container__specials,
 .main__container__testimonials,
 .main__container__about,
@@ -10,7 +10,7 @@
 .main__container__footer {
     margin-bottom: 0;
 }
-.main__container__description,
+.hero__container__description,
 .main__container__testimonials,
 .main__container__footer {
     background-color: #495E57;
@@ -20,37 +20,7 @@
  {
     background-color: white;
 }
-.main, 
-.main__specials {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* .main-intro-section */
-.main-intro-section {
-    max-width: 855px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-.main-intro-text-block {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 1rem 1rem 1rem 1rem;
-    width: 24rem;
-}
-.main-intro-text-title {
-    font-size: 2.7em;
-    color: #F4CE14;
-    margin: 0;
-}
-.main-intro-text-block h3 {
-    font-size: 2em;
-    color: white;
-    margin: 0;
-}
-.main-intro-button,
+.hero-intro-button,
 .specials-button {
     background-color: #F4CE14;
     border-style: none;
@@ -59,69 +29,20 @@
     border-radius: 5px;
     font-weight: 600;
 }
-.main-intro-button {
-    margin-top: auto;
-}
-.main-intro-image-block {
-    position: relative;
-    text-align: center;
-    padding: 0 1rem 0 0;
-}
-.main-intro-image {
-    width: 10rem;
-    border-radius: 10px;
-    margin: 1rem 0 1rem 0;
-    border: 2px solid black;
-}
-
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
-    .main {
-        height: 406px;
-    }
-    .main-intro-section {
-        justify-content: center;
-        justify-content: space-between;
-        padding-top: 2.5rem;
-        position: relative;
-    }
-    .main-intro-text-block {
-        width: 27rem;
-        padding: 0rem 1rem 1rem 1rem;
-    }
-    .main-intro-text-title,
     .specials-text-title {
         font-size: 4rem;
     }
-    .main-intro-image-block {
-        position: absolute;
-        right: 0;
-    }
-    .main-intro-text-block p {
-        color: white;
-        font-size: 1.125rem;
-        margin-bottom: 3rem;
-    }
-    .main-intro-text-block h3 {
-        font-size: 3.5rem;
-    }
-    .main-intro-image {
-        width: 375px;
-        height: 434px;
-        margin: -1rem 0 0 0;
-    }
-    .main-intro-button,
+    .hero-intro-button,
     .specials-button {
         width: 12.5rem;
         font-size: 1.125rem;
         padding: 1.22rem 0;
         transition: all 500ms ease;
     }
-    .main-intro-button:hover,
+    .hero-intro-button:hover,
     .specials-button:hover {
         box-shadow: 0 0 20px #eac50f;
-    }
-    .main__container__description {
-        margin-bottom: 5rem;
     }
 }
