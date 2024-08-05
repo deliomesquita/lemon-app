@@ -10,9 +10,7 @@ function Main() {
     <>
       <Hero />
       <Specials />
-      <main className="main__container__testimonials">
-        <Testimonials />
-      </main>
+      <Testimonials />
       <main className="main__container__about">
         <About />
       </main>

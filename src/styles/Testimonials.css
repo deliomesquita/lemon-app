@@ -1,4 +1,4 @@
-.main__container__testimonials {
+.testimonials__container__testimonials {
     padding: 1rem 0 5rem 0;
 }
 .testimonials-title {
@@ -44,7 +44,7 @@
 
 /*Desktop*/
 @media screen and (min-width: 1200px) {
-    .main__container__testimonials {
+    .testimonials__container__testimonials {
         padding: 7.65rem 0 11rem 0;
     }
     .testimonials__cards__container {
