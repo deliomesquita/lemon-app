@@ -11,9 +11,7 @@ function Main() {
       <Hero />
       <Specials />
       <Testimonials />
-      <main className="main__container__about">
-        <About />
-      </main>
+      <About />
       <main className="main__container__footer">
         <Footer />
       </main>

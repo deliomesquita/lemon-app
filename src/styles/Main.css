@@ -1,7 +1,7 @@
 .hero__container__description,
 .section__container__specials,
 .testimonials__container__testimonials,
-.main__container__about,
+.about__container__about,
 .main__container__footer {
     max-width: 1440px;
     margin: 0 auto;
@@ -16,7 +16,7 @@
     background-color: #495E57;
 }
 .section__container__specials,
-.main__container__about
+.about__container__about
  {
     background-color: white;
 }
