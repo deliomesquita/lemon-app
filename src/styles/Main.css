@@ -2,17 +2,17 @@
 .section__container__specials,
 .testimonials__container__testimonials,
 .about__container__about,
-.main__container__footer {
+.footer__container__footer {
     max-width: 1440px;
     margin: 0 auto;
     margin-bottom: 2.56rem;
 }
-.main__container__footer {
+.footer__container__footer {
     margin-bottom: 0;
 }
 .hero__container__description,
 .testimonials__container__testimonials,
-.main__container__footer {
+.footer__container__footer {
     background-color: #495E57;
 }
 .section__container__specials,

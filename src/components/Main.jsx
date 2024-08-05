@@ -12,9 +12,7 @@ function Main() {
       <Specials />
       <Testimonials />
       <About />
-      <main className="main__container__footer">
-        <Footer />
-      </main>
+      <Footer />
     </>
   );
 }

@@ -3,9 +3,9 @@ import "../styles/Testimonials.css";
 function Testimonials() {
   return (
     <>
-      <main className="testimonials__container__testimonials">
+      <section className="testimonials__container__testimonials">
         <h2 className="testimonials-title">Testimonials</h2>
-        <section className="testimonials__cards__container">
+        <article className="testimonials__cards__container">
           <div className="testimonials-card">
             <div className="testimonials-card-image-container">
               <img
@@ -66,8 +66,8 @@ function Testimonials() {
               odit exercitationem ipsam sequi?
             </p>
           </div>
-        </section>
-      </main>
+        </article>
+      </section>
     </>
   );
 }
