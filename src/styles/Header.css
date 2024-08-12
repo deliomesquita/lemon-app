@@ -18,11 +18,12 @@
 @media screen and (min-width: 1200px) {
   .header {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 5.2rem;
     max-width: 858px;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
 }
 .logo-container {
   margin-right: 0;

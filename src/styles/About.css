@@ -51,13 +51,13 @@
         }
         .about__image2 {
             top: 1rem;
-            right: 2rem;
+            right: 1rem;
             z-index: 1;
         }
 }
 /*Tablet*/
 @media screen and (min-width: 768px)  and (max-width: 1199px) {
-    .main__container__about {
+    .about__container__about {
         max-width: 91%;
     }
     .about__container {
