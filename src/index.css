@@ -7,10 +7,7 @@
   src: url('../src/fonts/MarkaziText-VariableFont_wght.ttf');
 }
 
-body {
-  /* min-height: 100vh;
-    display: flex;
-    flex-direction: column; */
+body, input, textarea, button {
   margin: 0;
   font-family: 'Karla', sans-serif;
 }

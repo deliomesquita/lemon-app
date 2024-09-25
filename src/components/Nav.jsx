@@ -20,31 +20,33 @@ import "../styles/Nav.css";
 
 function Nav() {
   return (
-    <nav className="navigation">
-      <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/specials">Specials</Link>
-          </li>
-          <li>
-            <Link to="/testimonials">Testimonials</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/booking">Booking</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <>
+      <nav className="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/specials">Specials</Link>
+            </li>
+            <li>
+              <Link to="/testimonials">Testimonials</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/booking">Booking</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 }
 
