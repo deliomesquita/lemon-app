@@ -1,5 +1,4 @@
 import "./App.css";
-import { useReducer } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Hero from "./components/Hero";
@@ -8,31 +7,32 @@ import Testimonials from "./components/Testimonials";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Booking from "./components/Booking";
+import { useReducer } from "react";
 import { Routes, Route } from "react-router-dom";
+
+// Function with initial state
+function initialzeTimes() {
+  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+}
+
+// Function with custom state logic
+function updateTimes(state, action) {
+  switch (action.type) {
+    case "update_Times":
+      return action.availableTimes;
+    default:
+      return state;
+  }
+}
 
 function App() {
   //===================================================================//
   // reducer to update the available times from Booking component START
   const [availableTimes, dispatch] = useReducer(updateTimes, initialzeTimes());
 
-  // Function with costum state logic
-  function updateTimes(state, action) {
-    switch (action.type) {
-      case "update_Times":
-        return action.availableTimes;
-      default:
-        return state;
-    }
-  }
-
-  // Function with initial state
-  function initialzeTimes() {
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-  }
-
   // Function to handle series of cases that match how to update the state
-  const handleDateChange = (selectedDate) => {
-    dispatch({ type: "update_times", availableTimes: selectedDate });
+  const handleDateChange = (selectedTime) => {
+    dispatch({ type: "update_times", availableTimes: selectedTime });
   };
   // reducer to update the available times from Booking component START//
   //===================================================================//
@@ -61,4 +61,4 @@ function App() {
   );
 }
 
-export default App;
+export { App, initialzeTimes, updateTimes };

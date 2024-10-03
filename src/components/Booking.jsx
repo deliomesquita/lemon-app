@@ -136,7 +136,7 @@ function Booking({ availableTimes, handleDateChange }) {
             </div>
             <div className="booking__name__container">
               <div className="booking__interior__firstname__container">
-                <label htmlFor-="firstname">
+                <label htmlFor="firstname">
                   First Name <span className="red-star">*</span>
                 </label>
                 <input
