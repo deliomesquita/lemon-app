@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Booking from "./components/Booking";
-import { updateTimes, initialzeTimes } from "./App";
+import { updateTimes, initializeTimes } from "./App";
 
 const TIMES = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 
@@ -11,13 +11,13 @@ test("renders the Booking heading", () => {
 });
 
 test("Validate the initial state of the reducer", () => {
-  const initialState = initialzeTimes();
+  const initialState = initializeTimes();
 
   expect(initialState).toEqual(TIMES);
 });
 
 test("Validate the same value that is provided in the state", () => {
-  const initialState = initialzeTimes();
+  const initialState = initializeTimes();
   const action = { type: "update_times", availableTimes: initialState };
   const updatedState = updateTimes(initialState, action);
   expect(updatedState).toEqual(initialState);

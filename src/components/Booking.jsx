@@ -1,21 +1,21 @@
 import "../styles/Booking.css";
 import { useState } from "react";
 
-function Booking({ availableTimes, handleDateChange }) {
+function Booking({ availableTimes, handleDateChange, submitForm }) {
   // create new date, remove the time and return just the date
   const newDate = () => {
     const date = new Date();
-    const dateWithoutTime = date.toLocaleDateString();
-    return dateWithoutTime;
+    // const dateWithoutTime = date.toLocaleDateString();
+    return date;
   };
 
   // Function to handle the date change
   const handleDateChangeUpdate = (e) => {
     const selectedDate = e.target.value;
     setDate(selectedDate);
-    handleDateChange(selectedDate);
+    handleDateChange(new Date(selectedDate));
   };
-
+  // Create useState variables for the form data
   const [date, setDate] = useState(newDate);
   const [time, setTime] = useState("17:00");
   const [adults, setAdults] = useState("1");
@@ -27,9 +27,24 @@ function Booking({ availableTimes, handleDateChange }) {
   const [specialrequest, setSpecialRequest] = useState("");
   const [occasion, setOccasion] = useState("Casual");
 
+  // Create formData variable to store the form data
+  const formData = [
+    date,
+    time,
+    adults,
+    children,
+    firstname,
+    lastname,
+    email,
+    phone,
+    specialrequest,
+    occasion,
+  ];
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(
+    submitForm(formData);
+    console.log({
       date,
       time,
       adults,
@@ -39,8 +54,8 @@ function Booking({ availableTimes, handleDateChange }) {
       email,
       phone,
       specialrequest,
-      occasion
-    );
+      occasion,
+    });
   };
 
   return (
@@ -212,7 +227,6 @@ function Booking({ availableTimes, handleDateChange }) {
                 Special Request <span className="red-star">*</span>
               </label>
               <textarea
-                required
                 type="text"
                 id="specialrequest"
                 placeholder="Write your special request"
