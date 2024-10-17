@@ -107,6 +107,15 @@ select#occasion {
     .booking__occasion__container {
         width: 46%;
     }
+    .booking__button {
+        width: 12.5rem;
+        font-size: 1.125rem;
+        padding: 1.22rem 0;
+        transition: all 500ms ease;
+    }
+    .booking__button:hover {
+         box-shadow: 0 0 20px #eac50f;
+    }
 
 }
 /*Tablet*/
@@ -124,4 +133,5 @@ select#occasion {
         padding: 3rem;
         background-color: #f9f7f7;
     }
+    
 }

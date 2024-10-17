@@ -1,6 +1,12 @@
 import "../styles/Hero.css";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
+  function navigatePage() {
+    return navigate("/booking");
+  }
+
   return (
     <>
       <section className="hero__container__description">
@@ -12,7 +18,9 @@ function Hero() {
               We are a family-owned restaurant that serves delicious food and
               drinks. We are located in Lisbon, Portugal.
             </p>
-            <button className="hero-intro-button">Reserve a Table</button>
+            <button className="hero-intro-button" onClick={navigatePage}>
+              Reserve a Table
+            </button>
           </div>
           <div className="hero-intro-image-block">
             <img

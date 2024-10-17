@@ -11,7 +11,8 @@ body {
 .testimonials__container__testimonials,
 .about__container__about,
 .footer__container__footer,
-.booking__container__booking {
+.booking__container__booking,
+.confirmed__booking__container {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;

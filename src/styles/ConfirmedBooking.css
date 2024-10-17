@@ -1,0 +1,72 @@
+.article__confirmed__booking__container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.go-home-button {
+   background-color: #F4CE14;
+    border-style: none;
+    width: 10rem;
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: 600;
+}
+svg {
+    transition-delay: 1ms;
+    transition-property: display;
+    margin-bottom: 1rem;
+}
+.check-element {
+	fill-opacity: 0;
+	animation-name: draw, fillIn;
+	animation-duration: 2.5s, .75s;
+	animation-iteration-count: 1, 1;
+	animation-fill-mode: forwards, forwards;
+	animation-delay: 0s, 1.25s
+}
+.check-element-square {
+    fill-opacity: 0;
+	animation-name: draw, fillIn;
+	animation-duration: 1.5s, 1000ms;
+	animation-iteration-count: 1, 1;
+	animation-fill-mode: forwards, forwards;
+    animation-delay: 0s, 1.25s;
+}
+
+.confirmed-booking-text-container {
+    animation: showtext 3s;
+}
+
+@keyframes showtext {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillIn {
+	from { 
+		fill-opacity: 0;
+	}
+	to { 
+		fill-opacity: 1;
+	}
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    .go-home-button {
+        width: 12.5rem;
+        font-size: 1.125rem;
+        padding: 1.22rem 0;
+        transition: all 500ms ease;
+    }
+    .go-home-button:hover {
+         box-shadow: 0 0 20px #eac50f;
+    }
+}
