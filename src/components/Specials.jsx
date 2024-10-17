@@ -13,7 +13,6 @@ function Specials() {
     const url = window.location.href;
     const pageUrl = "/specials";
     const button = document.querySelector(".specials-button");
-    console.log(button);
     if (url.includes(pageUrl)) {
       button.style.display = "none";
     }
