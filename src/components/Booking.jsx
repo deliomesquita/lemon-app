@@ -1,5 +1,6 @@
 import "../styles/Booking.css";
 import { useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 function Booking({ availableTimes, handleDateChange, submitForm }) {
   // create new date, remove the time and return just the date
@@ -58,6 +59,18 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
     });
   };
 
+  // Use a ref to directly access the DOM element to set min attribute in the date picker
+  const dateInputRef = useRef(null);
+
+  useEffect(() => {
+    if (dateInputRef.current) {
+      // Get the current date
+      const today = new Date().toISOString().split("T")[0];
+      // Set the min attribute
+      dateInputRef.current.setAttribute("min", today);
+    }
+  }, []);
+
   return (
     <>
       <section className="booking__container__booking">
@@ -74,6 +87,7 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                   required
                   type="date"
                   id="date"
+                  ref={dateInputRef}
                   value={date}
                   onChange={handleDateChangeUpdate}
                 />
