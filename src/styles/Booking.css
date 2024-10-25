@@ -91,6 +91,7 @@ select#occasion {
     font-weight: 600;
 }
 
+
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
     .booking__form__container {

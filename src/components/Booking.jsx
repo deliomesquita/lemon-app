@@ -71,6 +71,40 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
     }
   }, []);
 
+  // Firstname validation with useRef to access the firstname input element
+  const firstnameRef = useRef(null);
+
+  useEffect(() => {
+    if (firstnameRef.current) {
+      const input = firstnameRef.current;
+
+      const handleInvalid = (event) => {
+        if (
+          event.target.validity.patternMismatch ||
+          event.target.validity.valueMissing
+        ) {
+          event.target.setCustomValidity(
+            "Please enter a valid name with at least 3 characters, no numbers or special characters."
+          );
+        }
+      };
+
+      const handleChange = (event) => {
+        event.target.setCustomValidity("");
+      };
+
+      // Add event listeners
+      input.addEventListener("invalid", handleInvalid);
+      input.addEventListener("change", handleChange);
+
+      // Cleanup function to remove event listeners when component unmounts
+      return () => {
+        input.removeEventListener("invalid", handleInvalid);
+        input.removeEventListener("change", handleChange);
+      };
+    }
+  }, []);
+
   return (
     <>
       <section className="booking__container__booking">
@@ -140,12 +174,9 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                 {/* <input required type="number" min="1" id="adults" /> */}
               </div>
               <div className="booking__interior__children__container">
-                <label htmlFor="children">
-                  Children <span className="red-star">*</span>
-                </label>
+                <label htmlFor="children">Children</label>
                 <select
                   id="children"
-                  required
                   value={children}
                   onChange={(e) => setChildren(e.target.value)}
                 >
@@ -169,9 +200,11 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                   First Name <span className="red-star">*</span>
                 </label>
                 <input
+                  pattern="^[A-Za-z]{3,}$"
                   required
                   type="text"
                   id="firstname"
+                  ref={firstnameRef}
                   placeholder="Enter your first name"
                   value={firstname}
                   onChange={(e) => setFirstname(e.target.value)}
@@ -197,6 +230,7 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                   Email <span className="red-star">*</span>
                 </label>
                 <input
+                  pattern="/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim;"
                   required
                   type="email"
                   id="email"
@@ -221,12 +255,9 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
             </div>
             <div className="booking__specialrequest__container">
               <div className="booking__occasion__container">
-                <label htmlFor="occasion">
-                  Occasion <span className="red-star">*</span>
-                </label>
+                <label htmlFor="occasion">Occasion</label>
                 <select
                   id="occasion"
-                  required
                   value={occasion}
                   onChange={(e) => setOccasion(e.target.value)}
                 >
@@ -237,9 +268,7 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                   <option value="Christening">Christening</option>
                 </select>
               </div>
-              <label htmlFor="specialrequest">
-                Special Request <span className="red-star">*</span>
-              </label>
+              <label htmlFor="specialrequest">Special Request</label>
               <textarea
                 type="text"
                 id="specialrequest"
