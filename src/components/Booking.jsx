@@ -3,6 +3,8 @@ import { useState } from "react";
 import React, { useEffect, useRef } from "react";
 
 function Booking({ availableTimes, handleDateChange, submitForm }) {
+  const emailRegex = "/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/";
+
   // create new date, remove the time and return just the date
   const newDate = () => {
     const date = new Date();
@@ -85,6 +87,102 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
         ) {
           event.target.setCustomValidity(
             "Please enter a valid name with at least 3 characters, no numbers or special characters."
+          );
+        }
+      };
+
+      const handleChange = (event) => {
+        event.target.setCustomValidity("");
+      };
+
+      // Add event listeners
+      input.addEventListener("invalid", handleInvalid);
+      input.addEventListener("change", handleChange);
+
+      // Cleanup function to remove event listeners when component unmounts
+      return () => {
+        input.removeEventListener("invalid", handleInvalid);
+        input.removeEventListener("change", handleChange);
+      };
+    }
+  }, []);
+
+  // Lastname validation with useRef to access the lastname input element
+  const lastnameRef = useRef(null);
+
+  useEffect(() => {
+    if (lastnameRef.current) {
+      const input = lastnameRef.current;
+
+      const handleInvalid = (event) => {
+        if (
+          event.target.validity.patternMismatch ||
+          event.target.validity.valueMissing
+        ) {
+          event.target.setCustomValidity(
+            "Please enter only last name with at least 3 characters, no numbers or special characters."
+          );
+        }
+      };
+
+      const handleChange = (event) => {
+        event.target.setCustomValidity("");
+      };
+
+      // Add event listeners
+      input.addEventListener("invalid", handleInvalid);
+      input.addEventListener("change", handleChange);
+
+      // Cleanup function to remove event listeners when component unmounts
+      return () => {
+        input.removeEventListener("invalid", handleInvalid);
+        input.removeEventListener("change", handleChange);
+      };
+    }
+  }, []);
+
+  // Email validation with useRef to access the email input element
+  const emailnameRef = useRef(null);
+
+  useEffect(() => {
+    if (emailnameRef.current) {
+      const input = emailnameRef.current;
+
+      const handleInvalid = (event) => {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity("Please enter your email address.");
+        }
+      };
+
+      const handleChange = (event) => {
+        event.target.setCustomValidity("");
+      };
+
+      // Add event listeners
+      input.addEventListener("invalid", handleInvalid);
+      input.addEventListener("change", handleChange);
+
+      // Cleanup function to remove event listeners when component unmounts
+      return () => {
+        input.removeEventListener("invalid", handleInvalid);
+        input.removeEventListener("change", handleChange);
+      };
+    }
+  }, []);
+
+  // Phone validation with useRef to access the phoneinput element
+  const phonenameRef = useRef(null);
+
+  useEffect(() => {
+    if (phonenameRef.current) {
+      const input = phonenameRef.current;
+
+      const handleInvalid = (event) => {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity("Please enter your phone number.");
+        } else if (event.target.validity.patternMismatch) {
+          event.target.setCustomValidity(
+            "Please enter a valid phone number with between 5 and 15 digits. If you want to add a country code, add +countrycode followed by the number."
           );
         }
       };
@@ -215,9 +313,11 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                   Last Name <span className="red-star">*</span>
                 </label>
                 <input
+                  pattern="^[A-Za-z]{3,}$"
                   required
                   type="text"
                   id="lastname"
+                  ref={lastnameRef}
                   placeholder="Enter your last name"
                   value={lastname}
                   onChange={(e) => setLastname(e.target.value)}
@@ -230,10 +330,11 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                   Email <span className="red-star">*</span>
                 </label>
                 <input
-                  pattern="/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim;"
+                  pattern="(?![.@\s])[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}"
                   required
                   type="email"
                   id="email"
+                  ref={emailnameRef}
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -245,8 +346,10 @@ function Booking({ availableTimes, handleDateChange, submitForm }) {
                 </label>
                 <input
                   required
+                  pattern="^\+?\d{5,15}$"
                   type="tel"
                   id="phone"
+                  ref={phonenameRef}
                   placeholder="Enter your phone number"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
