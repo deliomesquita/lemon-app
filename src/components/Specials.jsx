@@ -25,7 +25,11 @@ function Specials() {
           <div className="specials-container">
             <div className="specials-text-button">
               <h2 className="specials-text-title">Specials</h2>
-              <button className="specials-button" onClick={navigatePage}>
+              <button
+                className="specials-button"
+                aria-label="On Click"
+                onClick={navigatePage}
+              >
                 Online Menu
               </button>
             </div>

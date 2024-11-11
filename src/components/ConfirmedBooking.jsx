@@ -45,7 +45,11 @@ function ConfirmedBooking() {
           <div className="confirmed-booking-text-container">
             <h2>Thanks for submitting!</h2>
             <p>Your booking has been confirmed!</p>
-            <button className="go-home-button" onClick={navigatePage}>
+            <button
+              className="go-home-button"
+              aria-label="On Click"
+              onClick={navigatePage}
+            >
               Go Home
             </button>
           </div>

@@ -18,7 +18,11 @@ function Hero() {
               We are a family-owned restaurant that serves delicious food and
               drinks. We are located in Lisbon, Portugal.
             </p>
-            <button className="hero-intro-button" onClick={navigatePage}>
+            <button
+              className="hero-intro-button"
+              aria-label="On Click"
+              onClick={navigatePage}
+            >
               Reserve a Table
             </button>
           </div>
