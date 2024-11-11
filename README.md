@@ -1,3 +1,8 @@
+Figma Mockup UI/UX design:
+https://www.figma.com/design/kFNx9UkEUgAqt494e1cpbB/Main?node-id=0-1&t=uhHf4rNHvXuXjwyy-1
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
